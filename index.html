@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passed or Failed</title>
+
+<!-- PyScript -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.9.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.9.1/core.js"></script>
+
+<style>
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    /* Background image */
+    background-image: url('https://i.pinimg.com/736x/36/6e/07/366e077a378e240da354aba2f3e4305a.jpg');
+    background-size: cover;       /* Make it cover the entire screen */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat; /* Avoid repeating */
+    background-attachment: fixed; /* Makes the background stay in place when scrolling */
+}
+
+
+  /* Container for all content */
+  .container {
+    background-color: #ffffff;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 350px;
+    border: 3px solid #5e60ce;
+  }
+
+  h2 {
+    color: #5e60ce;
+    margin-bottom: 30px;
+  }
+
+  /* Input styling */
+  input[type="number"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 80%;
+    border: 2px solid #5e60ce;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  input[type="number"]:focus {
+    border-color: #9b5de5;
+    box-shadow: 0 0 8px #9b5de5;
+  }
+
+  /* Button styling */
+  button {
+    padding: 12px 25px;
+    background-color: #5e60ce;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #9b5de5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Output styling */
+  #output {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5e60ce;
+    padding: 10px;
+    border: 2px dashed #9b5de5;
+    border-radius: 10px;
+    min-height: 40px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>GWA Checker</h2>
+  <input id="gwa" type="number" placeholder="Enter GWA">
+  <br>
+  <button py-click="check_result">Check Result</button>
+  <div id="output"></div>
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
